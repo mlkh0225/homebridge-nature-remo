@@ -54,18 +54,59 @@
             "type": "boolean",
             "default": true
           },
+          "temperatureOffset": {
+            "title": "Temperature Offset",
+            "type": "integer",
+            "default": true
+          },
           "humidity": {
             "title": "Humidity",
             "type": "boolean",
+            "default": true
+          },
+          "humidityOffset": {
+            "title": "Humidity Offset",
+            "type": "integer",
             "default": true
           },
           "light": {
             "title": "Light",
             "type": "boolean",
             "default": true
+          },
+          "motion": {
+            "title": "Motion",
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "report": {
+        "title": "External reporting",
+        "type": "object",
+        "condition": {
+          "functionBody": "return model.mini === false;"
+        },
+        "properties": {
+          "temperature": {
+            "title": "Temperature",
+            "type": "string"
+          },
+          "humidity": {
+            "title": "Humidity",
+            "type": "string"
+          },
+          "light": {
+            "title": "Light",
+            "type": "string"
+          },
+          "motion": {
+            "title": "Motion",
+            "type": "string"
           }
         }
       }
+
     }
   }
 }
